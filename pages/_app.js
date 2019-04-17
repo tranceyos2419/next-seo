@@ -5,7 +5,7 @@ import withGA from "next-ga";
 
 class MyApp extends App {
   render() {
-    const { pageProps } = this.props;
+    const { Component, pageProps } = this.props;
     return (
       <Container>
         <Head />
