@@ -1,5 +1,7 @@
 import React from "react";
 import App, { Container } from "next/app";
+import Router from "next/router";
+import withGA from "next-ga";
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -23,4 +25,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp;
+export default withGA("UA-138515076-1", Router)(MyApp);
